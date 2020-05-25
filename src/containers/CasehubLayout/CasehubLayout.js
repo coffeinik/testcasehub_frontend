@@ -20,11 +20,11 @@ import navigation from '../../_nav';
 // routes config
 import routes from '../../routes';
 
-const DefaultAside = React.lazy(() => import('./DefaultAside'));
-const DefaultFooter = React.lazy(() => import('./DefaultFooter'));
-const DefaultHeader = React.lazy(() => import('./DefaultHeader'));
+const CasehubAside = React.lazy(() => import('./CasehubAside'));
+const CasehubFooter = React.lazy(() => import('./CasehubFooter'));
+const CasehubHeader = React.lazy(() => import('./CasehubHeader'));
 
-class DefaultLayout extends Component {
+class CasehubLayout extends Component {
 
   loading = () => <div className="animated fadeIn pt-1 text-center">Loading...</div>
 
@@ -38,7 +38,7 @@ class DefaultLayout extends Component {
       <div className="app">
         <AppHeader fixed>
           <Suspense  fallback={this.loading()}>
-            <DefaultHeader onLogout={e=>this.signOut(e)}/>
+            <CasehubHeader onLogout={e=>this.signOut(e)}/>
           </Suspense>
         </AppHeader>
         <div className="app-body">
@@ -52,7 +52,7 @@ class DefaultLayout extends Component {
             <AppSidebarMinimizer />
           </AppSidebar>
           <main className="main">
-            <AppBreadcrumb appRoutes={routes} router={router}/>
+          <AppBreadcrumb appRoutes={routes} router={router}/>
             <Container fluid>
               <Suspense fallback={this.loading()}>
                 <Switch>
@@ -69,20 +69,19 @@ class DefaultLayout extends Component {
                     ) : (null);
                   })}
                   <Redirect from="/" to="/dashboard" />
-                  <Redirect from="/testcases" to="/testcases" />
                 </Switch>
               </Suspense>
             </Container>
           </main>
           <AppAside fixed>
             <Suspense fallback={this.loading()}>
-              <DefaultAside />
+              <CasehubAside />
             </Suspense>
           </AppAside>
         </div>
         <AppFooter>
           <Suspense fallback={this.loading()}>
-            <DefaultFooter />
+            <CasehubFooter />
           </Suspense>
         </AppFooter>
       </div>
@@ -90,4 +89,4 @@ class DefaultLayout extends Component {
   }
 }
 
-export default DefaultLayout;
+export default CasehubLayout;

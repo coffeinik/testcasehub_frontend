@@ -66,8 +66,7 @@ class ListGroups extends Component {
           <Col sm="12" xl="6">
             <Card>
               <CardHeader>
-                <i className="fa fa-align-justify"></i><strong>List Group</strong>
-                <small> disabled items</small>
+                <i className="fa fa-align-justify"></i><strong>Test Cases</strong>
               </CardHeader>
               <CardBody>
                 <ListGroup>

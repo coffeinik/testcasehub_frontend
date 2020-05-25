@@ -3,6 +3,22 @@ export default {
     {
       name: 'Dashboard',
       url: '/dashboard',
+      icon: 'icon-speedometer'
+    },
+    {
+      name: 'Test Cases',
+      url: '/testcases',
+      icon: 'icon-book',
+    },
+    {
+      name: 'Test Suites',
+      url: '/testcases',
+    }
+  ],
+  items2: [
+    {
+      name: 'Dashboard',
+      url: '/dashboard',
       icon: 'icon-speedometer',
       badge: {
         variant: 'info',

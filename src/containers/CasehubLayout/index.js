@@ -1,3 +1,3 @@
 import CasehubLayout from './CasehubLayout';
 
-export { CasehubLayout };
+export default CasehubLayout;
