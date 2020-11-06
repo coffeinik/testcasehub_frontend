@@ -11,8 +11,8 @@ export default {
       icon: 'icon-book',
     },
     {
-      name: 'Test Suites',
-      url: '/testcases',
+      name: 'Projects',
+      url: '/projects',
     }
   ],
   items2: [
